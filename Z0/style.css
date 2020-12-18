@@ -74,9 +74,14 @@ table {
     width: 100%;
 }
 
+tr {
+    height: 10rem;
+}
+
 td {
     width: 50%;
     border: 1px solid lightgrey;
+    vertical-align: top;
 }
 
 .border-violet {
