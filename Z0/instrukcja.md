@@ -40,7 +40,7 @@ Po kliknięciu przycisku "ZADANIE 5" wykonuje się funkcja `task5`. Uzupełnij f
 
 Po kliknięciu przycisku "ZADANIE 6" wykonuje się funkcja `task6`. Uzupełnij funkcję `task6` tak, aby:
 
-- zmieniała kolor wyświetlanego w `divie` o id `task6` tekstu na różowy,
+- zmieniała kolor wyświetlanego w `divie` o id `task6` tekstu na zielony,
 - UWAGA! wykorzystaj klasę `green-color`
 
 ### Zadanie 7

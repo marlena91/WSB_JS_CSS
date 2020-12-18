@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find"></script>
 </head>
 <body>
 
@@ -17,6 +18,9 @@
         <button onclick="task5()">ZADANIE 5</button>
         <button onclick="task6()">ZADANIE 6</button>
         <button onclick="task7()">ZADANIE 7</button>
+        <button onclick="task8()">ZADANIE 8</button>
+
+        <button onclick="task9()">ZADANIE 9</button>
     </div>
 
     <table>
@@ -68,7 +72,9 @@
             </td>
             <td>
                 TASK9
-                <div id="task9">
+                <div id="task9"
+                     onmouseenter="mouseIn()"
+                     onmouseleave="mouseOut()">
                 </div>
             </td>
         </tr>
