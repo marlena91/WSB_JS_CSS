@@ -42,7 +42,7 @@ function validate(object) {
 function validateNumber(number) {
 
     // walidujemy numer, podany w argumencie - w tym wypadku sprawdzamy, czy pasuje do wzorca
-    const valid = /^\d+([.,]\d{1,2})?$/.test(number);
+    const valid = number >= 0;
 
     // odszukujemy na stronie odpowiednie pole - input, w którym został wpisany numer
     const input = document.querySelector("input[name='number']");
@@ -70,7 +70,7 @@ function validateNumber(number) {
             const small = document.createElement("small");
             small.id = "number-input-message"; // nadajemy id - potem dzięki niemu dostaniemy się do elementu, żeby go usunąć
             small.className = "invalid"; // nadajemy klasę - żeby był czerwony
-            small.innerText = "Niepoprawny numer - dopuszczalna tylko dodatnia liczba z maksymalnie dwoma cyframi po przecinku"; // dodajemy tekst, który wyświetli się użytkownikowi
+            small.innerText = "Niepoprawny numer - dopuszczalna tylko dodatnia liczba"; // dodajemy tekst, który wyświetli się użytkownikowi
 
             // doczepiamy element jako "rodzeństwo" inputa
             input.parentElement.appendChild(small);
@@ -88,7 +88,6 @@ function validateRadio(radio) {
 }
 
 function validatePassword(password) {
-    // regex do hasła: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
     // todo
 
     return true;
