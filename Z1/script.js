@@ -41,7 +41,7 @@ function validate(object) {
 
 function validateNumber(number) {
 
-    // walidujemy numer, podany w argumencie - w tym wypadku sprawdzamy, czy pasuje do wzorca
+    // walidujemy numer, podany w argumencie - w tym wypadku sprawdzamy, czy jest większy lub równy 0
     const valid = number >= 0;
 
     // odszukujemy na stronie odpowiednie pole - input, w którym został wpisany numer
