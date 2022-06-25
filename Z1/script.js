@@ -82,19 +82,93 @@ function validateNumber(number) {
 }
 
 function validateRadio(radio) {
-    // todo
 
-    return true;
+    const valid = !!(radio);
+
+    const input = document.getElementById("favouriteNumber");
+
+    if (valid) {
+
+        input.className = "";
+
+        const nameMessage = document.getElementById("favourite-number-input-message");
+        if (nameMessage) {
+            nameMessage.parentElement.removeChild(nameMessage);
+        }
+    } else {
+
+        input.className = "invalid";
+
+        if (!document.getElementById("favourite-number-input-message")) {
+            const small = document.createElement("small");
+            small.id = "favourite-number-input-message";
+            small.className = "invalid";
+            small.innerText = "Pole musi by zaznaczone";
+
+            input.parentElement.appendChild(small);
+        }
+    }
+
+    return valid;
 }
 
 function validatePassword(password) {
-    // todo
+    const valid = (password.length >= 8);
 
-    return true;
+    const input = document.querySelector("input[name='password']");
+
+    // const input = document.getElementById("input[name='password']");
+
+    if (valid) {
+
+        input.className = "";
+
+        const nameMessage = document.getElementById("password-input-message");
+        if (nameMessage) {
+            nameMessage.parentElement.removeChild(nameMessage);
+        }
+    } else {
+
+        input.className = "invalid";
+
+        if (!document.getElementById("password-input-message")) {
+            const small = document.createElement("small");
+            small.id = "password-input-message";
+            small.className = "invalid";
+            small.innerText = "Haslo musi mie conajmniej 8 znakow";
+
+            input.parentElement.appendChild(small);
+        }
+    }
+    return valid;
+
 }
 
 function validateRepeatedPassword(password, repeatedPassword) {
-    // todo
+    const valid = (password === repeatedPassword);
 
-    return true;
+    const input = document.querySelector("input[name='password2']");
+
+
+    if (valid) {
+        input.className = "";
+
+        const nameMessage = document.getElementById("repeated-password-input-message");
+        if (nameMessage) {
+            nameMessage.parentElement.removeChild(nameMessage);
+        }
+    } else {
+
+        input.className = "invalid";
+
+        if (!document.getElementById("repeated-password-input-message")) {
+            const small = document.createElement("small");
+            small.id = "repeated-password-input-message";
+            small.className = "invalid";
+            small.innerText = "Hasla musza sie zgadzac";
+
+            input.parentElement.appendChild(small);
+        }
+    }
+    return valid;
 }
