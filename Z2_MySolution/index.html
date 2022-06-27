@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+<div class="container pt-3">
+    <div class="row">
+        <div class=col-sm>
+            <h2 class="text-center pb-3">
+                Your picture
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class=col-sm>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label class="col-form-label float-right">
+                        Width
+                    </label>
+                </div>
+
+                <div class="col-sm-3">
+                    <select id="width" class="form-control" name="width">
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="600">600</option>
+                        <option value="700">700</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label class="col-form-label float-right">
+                        Height
+                    </label>
+                </div>
+
+                <div class="col-sm-3">
+                    <select id="height" class="form-control" name="height">
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                        <option value="600">600</option>
+                        <option value="700">700</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label class="col-form-label float-right">
+                        Additional option
+                    </label>
+                </div>
+
+                <div class="col-sm-6">
+                    <div>
+                        <input class="form-check-input" type="radio" name="additionalOption" id="add1" value="1">
+                        <label class="form-check-label">blur</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="additionalOption" id="add2" value="2">
+                        <label class="form-check-label">grayscale</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-8">
+                    <button class="btn btn-primary float-right" onclick="generatePicture()">Generate!</button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-sm">
+            <div id="picture-div" class="text-center"></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
